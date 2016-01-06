@@ -4,8 +4,6 @@ var path = require('path');
 module.exports = {
     context: path.resolve(__dirname, "src"),
     entry: {
-        // hot: 'webpack/hot/dev-server',
-        // server: 'webpack-dev-server/client?http://localhost:8080',
         index: './js/index.js',
         about: './js/about.js'
     },
