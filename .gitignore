@@ -1,4 +1,7 @@
 
 node_modules/
-www/
+template/www/
 template/npm-debug.log
+
+bs-css-particle/www/
+bs-css-particle/npm-debug.log
