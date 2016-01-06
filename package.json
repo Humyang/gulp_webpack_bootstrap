@@ -1,0 +1,27 @@
+{
+  "name": "gulp_webpack_bootstrap",
+  "version": "1.0.0",
+  "description": "using gulp to build less file,watch file change,and create web site server.use webpack parse javascript.and use bootstrap frame to crete web main content.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bytes": "^2.2.0",
+    "chalk": "^1.1.1",
+    "del": "^2.2.0",
+    "extract-text-webpack-plugin": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "gutil": "^1.6.4",
+    "path": "^0.12.7",
+    "watchify": "^3.6.1",
+    "webpack": "^1.12.9"
+  }
+}
