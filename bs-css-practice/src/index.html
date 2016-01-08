@@ -1,0 +1,414 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Validation states with optional icons -->
+    <div class="container">
+        <form class="form" action="index.html" method="post">
+            <div class="form-group has-success">
+                <label for="control-label" for="inputSuccess1">Input with success</label>
+                <input type="text" name="name" value="" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+                <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label for="control-label" for="inputSuccess2">Input with success</label>
+                <input type="text" name="name" value="" class="form-control" id="inputSuccess2" aria-describedby="helpBlock2">
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+
+            </div>
+            <div class="form-group has-success has-feedback">
+                <label class="control-label" for="inputSuccess2">Input with success</label>
+                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <h1>Form</h1>
+        <form class="" action="index.html" method="post">
+            <div class="form-group">
+                <label for="inputExampleEmail">Email Address</label>
+                <input type="email" class="form-control" id="inputExampleEmail1" placeholder="Email" name="name" value="">
+
+
+            </div>
+            <div class="form-group">
+                <label for="inputExamplePassword1">Password</label>
+                <input type="password" class="form-control" id="inputExamplePassword1" placeholder="Password" name="name" value="">
+            </div>
+
+        </form>
+
+        <h1>inline form</h1>
+        <form class="form-inline" action="index.html" method="post">
+            <div class="form-group">
+                <label for="inputExampleEmail2">Email Address</label>
+                <input type="email" class="form-control" id="inputExampleEmail2" placeholder="Email" name="name" value="">
+            </div>
+            <div class="form-group">
+                <label for="inputExamplePassword2">Password</label>
+                <input type="password" class="form-control" id="inputExamplePassword2" placeholder="Password" name="name" value="">
+            </div>
+            <div class="checkbox">
+                <label for="">
+                    <input type="checkbox" name="name" value="">Remeber Me
+                </label>
+            </div>
+        </form>
+
+        <form class="form-inline" action="index.html" method="post">
+
+            <div class="form-group">
+                <label for="exampleInputAmount" class="sr-only">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        $
+                    </div>
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount" name="name" value="">
+                    <div class="input-group-addon">
+                        .00
+                    </div>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Transfer cash</button>
+        </form>
+
+
+        <h1>Horizontal form</h1>
+        <form class="form-horizontal" action="index.html" method="post">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" name="name" value="" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" name="name" value="" id="inputPassword3" class="form-control" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="name" value="">Remeber me
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Tetxtarea  -->
+
+        <form class="" action="index.html" method="post">
+            <div class="form-group">
+                <textarea name="name" rows="8" cols="40" class="form-control"></textarea>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- checkbox -->
+    <div class="container">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value=""> Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="checkbox disabled">
+            <label>
+                <input type="checkbox" value="" disabled> Option two is disabled
+            </label>
+        </div>
+
+        <!-- radio -->
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="radio disabled">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled> Option three is disabled
+            </label>
+        </div>
+
+        <!-- Inline checkboxes and radios -->
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+        </label>
+
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+        </label>
+
+        <!-- select -->
+        <select class="form-control" multiple name="">
+            <option value="option">option1</option>
+            <option value="option">option2</option>
+            <option value="option">option3</option>
+            <option value="option">option4</option>
+            <option value="option">option5</option>
+        </select>
+    </div>
+
+
+    <div class="container">
+        <h1>Table</h1>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+
+            <tr>
+                <td class="success">
+                    <a href="#" class="sr-only">success</a> a
+                </td>
+                <td>
+                    b
+                </td>
+                <td>
+                    c
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                    3
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="container">
+        <h2>Alignment classes</h1>
+            <p class="text-center">center text</p>
+            <p class="text-justify"> justify text</p>
+
+            <h2>Abbreviations</h2>
+            <abbr title="hello i am yangxionggui">yxg</abbr>
+            <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>ssSS
+            <abbr title="HyperText Markup Language">HTML</abbr>
+
+            <h2>Address</h2>
+            <address>
+                <strong>Twitter.Inc.</strong>
+                <br> 1355 Market Street,Suite 900
+                <br> San Francisco, CA 94103
+                <br>
+                <abbr title="Phone">P:</abbr>(123) 456-7890
+            </address>
+            <address>
+                <strong>Full Name</strong>
+                <br>
+                <a href="#">hunyang.github.io</a>
+            </address>
+
+            <h2>Blockquotes</h2>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </blockquote>
+
+            <h3>Blockquotes options</h3>
+            <h4>Naming Source</h4>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer>Someon famous in
+                    <cite title="Source Title">Source Title</cite>
+                </footer>
+            </blockquote>
+            <h4>Alter Display</h4>
+            <blockquote class="blockquote-reverse">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer>Someon famous in
+                    <cite title="Source Title">Source Title</cite>
+                </footer>
+            </blockquote>
+
+
+            <h2>List</h2>
+            <ul>
+                <li>222222222222</li>
+                <li>222222222222</li>
+                <li>222222222222</li>
+                <li>222222222222</li>
+                <li>222222222222</li>
+            </ul>
+
+            <ol>
+                <li>111111111111</li>
+                <li>111111111111</li>
+                <li>111111111111</li>
+                <li>111111111111</li>
+                <li>111111111111</li>
+            </ol>
+
+            <ul class="list-unstyled">
+                <li>no style</li>
+                <li>no style</li>
+                <li>no style</li>
+                <li>no style</li>
+                <li>no style</li>
+            </ul>
+
+            <ul class="list-inline">
+                <li>inline 1</li>
+                <li>inline 2</li>
+                <li>inline 3</li>
+            </ul>
+
+
+            <h2>description</h2>
+            <dl class="">
+                <dt>我是什么东西</dt>
+                <dd>我也不知道你是什么东西</dd>
+                <dt>我是标题</dt>
+                <dd>我是详细内容吗？</dd>
+            </dl>
+
+            <h2>Horizontal description</h2>
+            <dl class="dl-horizontal">
+                <dt>我是水平描述的标题</dt>
+                <dd>我是水平描述的内容</dd>
+                <dt>我是水平描述的标题</dt>
+                <dd>我是水我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容我是水平描述的内容平描述的内容</dd>
+            </dl>
+            <h1>Code</h1>
+            <h2>User input</h2>
+            <kbd>
+                <kbd>Ctrl</kbd> +
+                <kbd>P</kbd>
+            </kbd>
+
+            <h2>Basic block</h2>
+            <pre>
+                &lt;p&gt;Sample text here...&lt;/p&gt;
+            </pre>
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project namedsdsd</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right" role="form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+                    risus.
+                </p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; Company 2015</p>
+        </footer>
+    </div>
+    <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+
+    </script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/commons.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
