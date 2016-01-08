@@ -2,6 +2,8 @@
 node_modules/
 template/www/
 template/npm-debug.log
+
+bs-css-practice/
 bs-css-particle/npm-debug.log
 bs-css-practice/www/
 
