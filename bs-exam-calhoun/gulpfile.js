@@ -18,7 +18,7 @@ var less = require('gulp-less');
 // var xtend = require('xtend');
 var webpackConfig = require("./webpack.config.js");
 
-//发布版本 
+//发布版本
 var uglify = require('gulp-uglify'); //JS 压缩混淆
 var minify = require('gulp-minify-css'); //CSS 压缩
 
@@ -93,16 +93,18 @@ gulp.task('build', ['html', 'images', 'fonts', 'css', 'less']);
 
 gulp.task("webpack", function(callback) {
     // 参考地址：https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
-    
+
     // modify some webpack config options
     var myConfig = Object.create(webpackConfig);
 
     // run webpack
     webpack(myConfig, function(err, stats) {
         if (err) throw new gutil.PluginError("webpack:build", err);
+
         gutil.log("[webpack:build]", stats.toString({
             colors: true
         }));
+
         callback();
     });
 });
@@ -118,11 +120,11 @@ gulp.task('minify', plumb.bind(null, [wwwDir + '/css/*'], [minify], wwwDir + '/c
 
 gulp.task('watch', ['html', 'images', 'fonts', 'css', 'less','webpack','jsvendor'], function() {
     gulp.watch(['src/*.html'], ['html']);
-    gulp.watch(['src/img/**/*.*'], ['images']);
+    gulp.watch(['src/img/*'], ['images']);
     gulp.watch(['src/fonts/**/*.*'], ['fonts']);
     gulp.watch(['src/css/**/*.css'], ['css']);
     gulp.watch(['src/css/**/*.less'], ['less']);
-    gulp.watch(['src/js/*'], ['webpack']);
+    gulp.watch(['src/js/*.*'], ['webpack']);
 });
 
 gulp.task('watchless', ['less'], function() {

@@ -1,4 +1,205 @@
-// .ss{
-// 	border-radius: 50%;
-// 	padding: 3px;
-// }
+body {
+    background-color: #333;
+}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {
+    body {
+        padding-top: 95px;
+    }
+}
+@media (min-width: 1200px) {}
+// navbar
+.navbar.navbar-inverse {
+    background: #024C6A;
+    .navbar-header {
+        a {
+            margin-left: 25px;
+            padding: 40px 40px 32px;
+            position: absolute;
+            z-index: 1000;
+            background-color: #eb1a21;
+        }
+        img {}
+    }
+    .collapse.navbar-collapse {
+        text-align: right;
+        // TODO media
+        ul {
+            list-style: none;
+            li {
+                a {
+                    padding: 10px;
+                    color: white;
+                    line-height: 3;
+                }
+                display: inline;
+            }
+        }
+    }
+    .nav-phone {
+        color: white;
+        text-align: right;
+        line-height: 3;
+        a {
+            padding-right: 10px;
+            color: white;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+// banner
+.unslider-nav {
+    display: none;
+}
+.banner {
+    position: relative;
+    overflow: auto;
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+    li {
+        list-style: none;
+        float: left;
+        background-size: 100% 100%;
+    }
+    li.banner1 {
+        background-image: url(../img/banner1.jpg);
+    }
+    li.banner2 {
+        background-image: url(../img/banner2.jpg);
+    }
+    li.banner3 {
+        background-image: url(../img/banner3.jpg);
+    }
+    li.banner4 {
+        background-image: url(../img/banner4.jpg);
+    }
+    li.banner5 {
+        background-image: url(../img/banner5.jpg);
+    }
+    .inner {
+        padding: 300px 0 263px;
+    }
+    div.sliderLinkContainer {
+        display: block;
+        overflow: auto;
+        text-align: center;
+        background-color: #EB1A21;
+        ul.sliderLink {
+            margin: 0;
+            li {
+                width: 20%;
+                display: inline-block;
+                top: 0;
+                a {
+                    position: relative;
+                    width: 100%;
+                    line-height: 5;
+                    padding: 0 32px;
+                    color: white;
+                    display: inline-block;
+                }
+                // padding: 10%;
+            }
+            li.active {
+                background-color: #693C3A;
+                a::before {
+                    position: absolute;
+                    font-size: 20px;
+                    left: 45%;
+                    line-height: 1;
+                    content: "\e114";
+                }
+            }
+        }
+    }
+}
+.introduction {
+    .inner {
+        color: white;
+        // padding: 30px;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+            color: #f5f5f5;
+            padding: 0;
+            //             padding: 50px;
+            // padding-top: 0;
+            // padding-bottom: 10px;
+        }
+        h4 {
+            padding: 0;
+            color: #B3B3B3;
+            //             padding: 50px;
+            // padding-top: 0;
+            // padding-bottom: 10px;
+        }
+    }
+}
+.video {
+    .video-container {
+        // TODO media
+        background-image: url(../img/video-image.jpg);
+        background-size: 100% 100%;
+        padding: 270px 0;
+    }
+}
+// Introduction two
+.introductionTwo {
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+    }
+    ul {
+        list-style: none;
+        color: white;
+        text-align: center;
+        li {
+            &:first-child {
+                position: relative;
+                top: -7px;
+            }
+            vertical-align: text-top;
+            display: inline-block;
+            width: 33%;
+            p {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+.bannerTwo {
+    position: relative;
+    overflow: auto;
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+    li {
+        list-style: none;
+        float: left;
+        img{
+            width: 100%;
+        }
+        // background-size: 100% 100%;
+    }
+    // li.banner1 {
+    //     background-image: url(../img/banner-1.jpg);
+    // }
+    // li.banner2 {
+    //     background-image: url(../img/banner-2.jpg);
+    // }
+    // li.banner3 {
+    //     background-image: url(../img/banner-3.jpg);
+    // }
+    // .inner {
+    //     padding: 250px 0 220px;
+    // }
+}
