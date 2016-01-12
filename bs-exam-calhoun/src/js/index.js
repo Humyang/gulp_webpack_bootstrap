@@ -8,9 +8,9 @@ $(document).ready(function() {
         arrows: false,
         autoplay: true
     });
-    var slider = $('.bannerTwo').unslider({
+    var slider2 = $('.bannerTwo').unslider({
         arrows: false,
-        autoplay: true
+        autoplay: false
     });
     $(".sliderLink li").on("click", function() {
         console.log('11');
@@ -19,6 +19,7 @@ $(document).ready(function() {
 
         slider.unslider('animate:' + $(this).index());
     });
+
     slider.on('unslider.change', function(event, index, slide) {
         console.log('Slide has been changed to22ss  asaas2 ' + index);
         $(".sliderLink li").removeClass('active glyphicon');

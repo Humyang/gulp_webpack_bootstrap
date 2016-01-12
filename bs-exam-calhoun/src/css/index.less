@@ -1,5 +1,8 @@
+@color-white: #f5f5f5;
+@color-deepblue: #024C6A;
 body {
     background-color: #333;
+    padding: 0;
 }
 @media (min-width: 768px) {}
 @media (min-width: 992px) {
@@ -29,7 +32,7 @@ body {
             li {
                 a {
                     padding: 10px;
-                    color: white;
+                    color: #F5F5F5;
                     line-height: 3;
                 }
                 display: inline;
@@ -42,7 +45,7 @@ body {
         line-height: 3;
         a {
             padding-right: 10px;
-            color: white;
+            color: #F5F5F5;
             &:hover {
                 color: white;
             }
@@ -152,7 +155,7 @@ body {
 // Introduction two
 .introductionTwo {
     h1 {
-        color: white;
+        color: #F5F5F5;
         text-align: center;
         font-size: 50px;
     }
@@ -185,10 +188,35 @@ body {
     li {
         list-style: none;
         float: left;
-        img{
+        .inner {
+            color: white;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            width: 13%;
+            padding: 3%;
+            z-index: 11;
+            overflow: hidden;
+            h4 {
+                // padding: 20px;
+            }
+            h2 {
+                // padding: 20px;
+            }
+            p {
+                // padding:20px;
+            }
+            // position: ;
+        }
+        .opacity {
+            .inner;
+            background-color: #024C6A;
+            opacity: 0.7;
+            z-index: 10;
+        }
+        img {
             width: 100%;
         }
-        // background-size: 100% 100%;
     }
     // li.banner1 {
     //     background-image: url(../img/banner-1.jpg);
@@ -202,4 +230,99 @@ body {
     // .inner {
     //     padding: 250px 0 220px;
     // }
+}
+.started {
+    color: #F5F5F5;
+    text-align: center;
+    padding-bottom: 30px;
+    h1 {
+        margin: 0;
+        padding-top: 24px;
+    }
+    h5 {
+        padding: 0 30%;
+    }
+    button {
+        background-color: #f5f5f5;
+        color: #eb1a21;
+        padding: 10px 40px;
+        border: 3px solid #eb1a21;
+        font-weight: bold;
+    }
+}
+.News {
+    background-color: @color-deepblue;
+    color: @color-white;
+    // text-align: center;
+    // padding: 50px 0;
+    text-align: left;
+    // padding: 50px 23%;
+    padding-top: 20px;
+    h1 {
+        margin: 0;
+        text-align: center;
+        padding: 20px 0;
+    }
+    a {
+        color: @color-white;
+        font-weight: 800;
+        &:hover {
+            color: @color-white;
+        }
+    }
+    h5 {
+        margin-top: 20px;
+    }
+    p {
+        color: #E4E4E4;
+    }
+    hr {
+        margin: 60px 0;
+    }
+    .logo {
+        width: 150px;
+        display: inline-block;
+        padding-bottom: 120px;
+    }
+    .bottom-contact-us {
+        float: right;
+        a {
+            &:last-child {
+                padding-right: 0;
+            }
+            padding: 20px;
+        }
+        p {
+            text-align: right;
+            padding: 10px 0;
+        }
+        .SNS {
+            text-align: right;
+            padding-right: 20px;
+            a {
+                background-color: white;
+                color: black;
+                margin: 0;
+                display: inline-block;
+                padding: 10px;
+                border-radius: 100px;
+                i {
+                    width: 32px;
+                    display: inline-block;
+                    font-size: 32px;
+                    background-color: white;
+                    color: black;
+                    text-align: center;
+                    text-decoration: none;
+                }
+            }
+        }
+        form{
+            padding: 20px 0;
+            padding-bottom: 150px;
+            button{
+                margin-left: 40px;
+            }
+        }
+    }
 }
