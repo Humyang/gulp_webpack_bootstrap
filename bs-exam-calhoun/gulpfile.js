@@ -1,7 +1,7 @@
 // var babelify = require('babelify');
 // var brfs = require('brfs');
 // var browserify = require('browserify');
-var webpack = require("webpack");
+// var webpack = require("webpack");
 
 var bytes = require('bytes');
 var chalk = require('chalk');
@@ -23,6 +23,8 @@ var uglify = require('gulp-uglify'); //JS 压缩混淆
 var minify = require('gulp-minify-css'); //CSS 压缩
 
 var gulp = require('gulp');
+
+var webpack = require('webpack-stream');
 
 var productionDir = './assets';
 var Development = './www';
@@ -89,25 +91,33 @@ gulp.task('less', plumb.bind(null, 'src/css/*.less', [less], wwwDir + '/css'));
 gulp.task('jsvendor', plumb.bind(null, 'src/js/vendor/*', [], wwwDir + '/js/vendor/'));
 // gulp.task('scripts', buildApp.bind(null, ['./src/js/app.js'], [babelifyTransform, brfs], wwwDir + '/js', false));
 
-gulp.task('build', ['html', 'images', 'fonts', 'css', 'less']);
+gulp.task('build', ['html', 'images', 'fonts', 'css', 'less','webpack']);
 
-gulp.task("webpack", function(callback) {
-    // 参考地址：https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
-
-    // modify some webpack config options
-    var myConfig = Object.create(webpackConfig);
-
-    // run webpack
-    webpack(myConfig, function(err, stats) {
-        if (err) throw new gutil.PluginError("webpack:build", err);
-
-        gutil.log("[webpack:build]", stats.toString({
-            colors: true
-        }));
-
-        callback();
-    });
+// gulp.task('webpack', plumb.bind(null, 'src/js/*.js', [webpack(require('./webpack.config.js'))], wwwDir));
+gulp.task('webpack', function() {
+    return gulp.src('src/js/index.js')
+        .pipe(webpack(require('./webpack.config.js')))
+        .pipe(gulp.dest(wwwDir))
+        .pipe(connect.reload());
 });
+
+// gulp.task("webpack", function(callback) {
+//     // 参考地址：https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
+//
+//     // modify some webpack config options
+//     var myConfig = Object.create(webpackConfig);
+//
+//     // run webpack
+//     webpack(myConfig, function(err, stats) {
+//         if (err) throw new gutil.PluginError("webpack:build", err);
+//
+//         gutil.log("[webpack:build]", stats.toString({
+//             colors: true
+//         }));
+//
+//         callback();
+//     });
+// });
 
 // Clean
 gulp.task('clean', function() {
@@ -118,7 +128,7 @@ gulp.task('clean', function() {
 gulp.task('uglify', plumb.bind(null, [wwwDir + '/js/*'], [uglify], wwwDir + '/js'));
 gulp.task('minify', plumb.bind(null, [wwwDir + '/css/*'], [minify], wwwDir + '/css'));
 
-gulp.task('watch', ['html', 'images', 'fonts', 'css', 'less','webpack','jsvendor'], function() {
+gulp.task('watch', ['html', 'images', 'fonts', 'css', 'less', 'webpack', 'jsvendor'], function() {
     gulp.watch(['src/*.html'], ['html']);
     gulp.watch(['src/img/*'], ['images']);
     gulp.watch(['src/fonts/**/*.*'], ['fonts']);
