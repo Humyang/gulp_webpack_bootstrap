@@ -91,7 +91,7 @@ gulp.task('less', plumb.bind(null, 'src/css/*.less', [less], wwwDir + '/css'));
 gulp.task('jsvendor', plumb.bind(null, 'src/js/vendor/*', [], wwwDir + '/js/vendor/'));
 // gulp.task('scripts', buildApp.bind(null, ['./src/js/app.js'], [babelifyTransform, brfs], wwwDir + '/js', false));
 
-gulp.task('build', ['html', 'images', 'fonts', 'css', 'less','webpack']);
+
 
 // gulp.task('webpack', plumb.bind(null, 'src/js/*.js', [webpack(require('./webpack.config.js'))], wwwDir));
 gulp.task('webpack', function() {
@@ -136,6 +136,7 @@ gulp.task('watch', ['html', 'images', 'fonts', 'css', 'less', 'webpack', 'jsvend
     gulp.watch(['src/css/**/*.less'], ['less']);
     gulp.watch(['src/js/*.*'], ['webpack']);
 });
+gulp.task('build', ['html', 'images', 'fonts', 'css', 'less','webpack','jsvendor']);
 
 gulp.task('watchless', ['less'], function() {
     gulp.watch(['src/css/**/*.less'], ['less']);
@@ -151,6 +152,6 @@ gulp.task('serve', function() {
 
 gulp.task('dev', ['serve', 'watch']);
 
-gulp.task('production', ['build'], function() {
+gulp.task('dist', ['build'], function() {
     gulp.start('uglify', 'minify');
 });
