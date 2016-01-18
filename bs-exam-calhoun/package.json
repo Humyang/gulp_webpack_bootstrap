@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
   	"start":"gulp clean && gulp dev",
+    "dist":"NODE_ENV=production gulp clean && NODE_ENV=production gulp dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
