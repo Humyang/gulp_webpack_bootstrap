@@ -6,7 +6,7 @@ $(document).ready(function() {
     // alert('1');
     var slider = $('.banner').unslider({
         arrows: false,
-        autoplay: false
+        autoplay: true
     });
     var slider2 = $('.bannerTwo').unslider({
         arrows: false,
